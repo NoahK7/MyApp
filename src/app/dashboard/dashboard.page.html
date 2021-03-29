@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="danger">
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center">My Profile</ion-card-subtitle>
+      <ion-card-title class="ion-text-center">Hello {{user.name}}!</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content class="ion-text-center">
+
+      Email: {{user.email}}<br>
+
+    </ion-card-content>
+
+    <ion-button color="primary" expand="block" (click)="logout()">Logout</ion-button><br>
+    <ion-button color="danger" expand="block" (click)="delete()">Delete Account</ion-button>
+
+  </ion-card>
+
+</ion-content>

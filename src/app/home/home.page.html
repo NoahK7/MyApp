@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-center">
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="danger">
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Existing User?</strong>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="email" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password" ></ion-input>
+    </ion-item>
+
+     <div>
+    <ion-text color="danger" *ngIf="error" color="danger">
+     {{errorMsg}}
+    </ion-text>
+     </div>
+     
+    <ion-button color="primary"  (click)="login()">Login</ion-button>
+
+    <p>or</p>
+    <ion-button color="danger" [routerLink]="['/register']">Register</ion-button>
+
+  </div>
+</ion-content>
