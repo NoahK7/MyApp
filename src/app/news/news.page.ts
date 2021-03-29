@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-news',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsPage implements OnInit {
 
-  constructor() { }
+  newslist:  any;
+
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    console.log("Inside New Page")
+
+    this.http.get('https://api.thesneakerdatabase.com/v1/sneakers').subscribe((response) => {
+      console.log(response);
+      this.newslist = response
+    });
+
+  
   }
 
 }
