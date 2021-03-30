@@ -21,7 +21,10 @@ export class NewsPage implements OnInit {
       console.log(response);
       this.newslist = response
     });
-
+    /*this.http.get('https://api.thesneakerdatabase.com/v1/sneakers').subscribe((response) => {
+      console.log(response);
+      this.newslist = response
+    });*/
   
   }
 
