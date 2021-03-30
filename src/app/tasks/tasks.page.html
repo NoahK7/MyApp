@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar color="danger">
-    <ion-title class="ion-text-center">Tasks</ion-title>
+    <ion-title class="ion-text-center"> My Tasks</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-fab vertical="bottom" horizontal ="end" slot="fixed">
-    <ion-fab-button (click)="addNewTask()">
+  <ion-fab vertical="bottom"  horizontal ="end" slot="fixed">
+    <ion-fab-button color="danger" (click)="addNewTask()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
@@ -22,7 +22,6 @@
       <ion-item>
         <ion-label text-wrap>
           <h2>{{task.title}}</h2>
-          <!-- This is called an angular pipe to format text when showing -->
           <h3>{{task.datetime | date: 'EEEE, MMMM d, y H:mm'}}</h3>
         </ion-label>
         <ion-checkbox slot="start" checked="{{task.isCompleted}}" (ionChange)="mark(task)"></ion-checkbox>

@@ -26,16 +26,12 @@ export class TasksPage implements OnInit {
 
 async addNewTask() {
   const alert = await this.alertController.create({
-    header: 'New Task 🚀',
+    header: 'What is the plan?',
     inputs: [
       {
         name: 'title',
         type: 'text',
         placeholder: 'What are you planning to do?'
-      },
-      {
-        name: 'datetime',
-        type: 'datetime-local',
       },
     ],
     buttons: [
@@ -54,7 +50,7 @@ async addNewTask() {
           let temp = this.tasks
           temp.push(data)
 
-          // We will sort the tasks by upcoming
+
           temp.sort(function (a, b) {
             return +new Date(a.datetime) - +new Date(b.datetime);
           });
