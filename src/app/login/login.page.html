@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar color="danger">
     <ion-title>
       Login
     </ion-title>
@@ -8,8 +8,8 @@
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar color="primary">
-      <ion-title size="large">Login</ion-title>
+    <ion-toolbar color="danger">
+      <ion-title class="ion-text-center">Login</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -28,7 +28,7 @@
      {{errorMsg}}
     </ion-text>
 
-    <ion-button color="primary"  (click)="login()" expand="block">Login</ion-button>
+    <ion-button color="danger"  (click)="login()" expand="block">Login</ion-button>
 
     
   </div>
