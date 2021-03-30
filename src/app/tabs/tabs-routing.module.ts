@@ -16,10 +16,10 @@ const routes: Routes = [
         path: 'news',
         loadChildren: () => import('../news/news.module').then( m => m.NewsPageModule)
       },
-      /*{
-        path: 'todo',
-        loadChildren: () => import('../todo/todo.module').then( m => m.TodoPageModule)
-      }*/
+      {
+        path: 'search',
+        loadChildren: () => import('../search/search.module').then( m => m.SearchPageModule)
+      },
     ]
   },
 ];
