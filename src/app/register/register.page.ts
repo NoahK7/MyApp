@@ -22,7 +22,6 @@ export class RegisterPage implements OnInit {
 
   register(){
     console.log(this.user);
-    // Can do validation if needed
     this.storage.set('user', this.user).then((obj) => {
       this.router.navigate(['/dashboard'])
     });

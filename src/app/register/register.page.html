@@ -1,35 +1,32 @@
 <ion-header>
-  <ion-toolbar color="danger">
-    <ion-title>Register</ion-title>
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
+    <ion-title>Register</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label position="floating" >Your Name: </ion-label>
+    <ion-input type="text" [(ngModel)]="user.name" ></ion-input>
+  </ion-item>
 
-    <ion-item>
-      <ion-label position="floating" >Your Name: </ion-label>
-      <ion-input type="text" [(ngModel)]="user.name" ></ion-input>
-    </ion-item>
+  <ion-item>
+    <ion-label position="floating" >Your Email: </ion-label>
+    <ion-input type="email" [(ngModel)]="user.email" ></ion-input>
+  </ion-item>
 
-    <ion-item>
-      <ion-label position="floating" >Your Email: </ion-label>
-      <ion-input type="email" [(ngModel)]="user.email" ></ion-input>
-    </ion-item>
+  <ion-item>
+    <ion-label position="floating" >Your Mobile: </ion-label>
+    <ion-input type="email" [(ngModel)]="user.mobile" ></ion-input>
+  </ion-item>
 
-    <ion-item>
-      <ion-label position="floating" >Your Password: </ion-label>
-      <ion-input type="password" [(ngModel)]="user.password" ></ion-input>
-    </ion-item>
+  <ion-item>
+    <ion-label position="floating" >Your Password: </ion-label>
+    <ion-input type="password" [(ngModel)]="user.password" ></ion-input>
+  </ion-item>
 
-    <ion-item>
-      Agree to privacy policy:   
-      <ion-checkbox color="primary" [(ngModel)]="user.policy"></ion-checkbox>
-    </ion-item>
-
-
-    <ion-button expand="block" (click)="register()">Register an Account</ion-button>
-
+  <ion-button expand="block" (click)="register()">Register an Account</ion-button>
 </ion-content>
