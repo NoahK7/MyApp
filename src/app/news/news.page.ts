@@ -17,7 +17,7 @@ export class NewsPage implements OnInit {
   ngOnInit() {
     console.log("Inside New Page")
 
-    this.http.get('https://api.thesneakerdatabase.com/v1/sneakers').subscribe((response) => {
+    this.http.get('https://spaceflightnewsapi.net/api/v2/articles').subscribe((response) => {
       console.log(response);
       this.newslist = response
     });
